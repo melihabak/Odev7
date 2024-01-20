@@ -2,117 +2,116 @@ import java.util.Arrays;
 
 public class Gezegenler {
 
-    static String[] gezegenlerDizisi = {"Merkur", "Venus",  "Dunya", "Mars", "Jupiter", "Saturn", "Uranus", "Neptun"};
-    static String s = Arrays.toString(gezegenlerDizisi);
+    public enum gezegenlerDizisi  {
+        MERKUR, VENUS,  DUNYA, MARS, JUPITER, SATURN, URANUS, NEPTUN
+    }
+
 
     public static void siralama (){
 
-        for (int i=0;i<gezegenlerDizisi.length;i++){
+        int i=1;
+        for (gezegenlerDizisi gezegen : gezegenlerDizisi.values()){
 
-            System.out.println(gezegenlerDizisi[i]+" gezegeninin Gunese olan siralamasi : "+ (i+1));
+            System.out.println(gezegen+" gezegeninin Gunese olan siralamasi : "+ i);
+            i++;
 
         }
     }
     public static void guneseUzaklik (){
 
-        for (int i=0;i<gezegenlerDizisi.length;i++){
+        int r = 10;
+        for (gezegenlerDizisi gezegen : gezegenlerDizisi.values()){
 
-            System.out.println(gezegenlerDizisi[i]+" gezegeninin Gunese olan uzakligi : "+ (i+10)+" km");
+            System.out.println(gezegen+" gezegeninin Gunese olan uzakligi : "+ r +" km");
+            r = r+10;
 
         }
     }
     public static void yaricap () {
 
-        for (int i = 0; i < gezegenlerDizisi.length; i++) {
+        for (gezegenlerDizisi gezegen : gezegenlerDizisi.values()) {
 
-            switch (i) {
+            switch (gezegen) {
 
-                case 0:
-                    System.out.println(gezegenlerDizisi[0] + " yaricapi : " + 45 + " km");
+                case MERKUR:
+                    System.out.println("Merkurun yaricapi : " + 45 + " km");
                     break;
 
-                case 1:
-                    System.out.println(gezegenlerDizisi[1] + " yaricapi : " + 65 + " km");
+                case VENUS:
+                    System.out.println("Venusun yaricapi : " + 65 + " km");
                     break;
 
-                case 2:
-                    System.out.println(gezegenlerDizisi[2] + " yaricapi : " + 60 + " km");
+                case DUNYA:
+                    System.out.println("Dunyanin yaricapi : " + 60 + " km");
                     break;
 
-                case 3:
-                    System.out.println(gezegenlerDizisi[3] + " yaricapi : " + 40 + " km");
+                case MARS:
+                    System.out.println("Marsin yaricapi : " + 40 + " km");
                     break;
 
-                case 4:
-                    System.out.println(gezegenlerDizisi[4] + " yaricapi : " + 155 + " km");
+                case JUPITER:
+                    System.out.println("Jupiterin yaricapi : " + 155 + " km");
                     break;
 
-                case 5:
-                    System.out.println(gezegenlerDizisi[5] + " yaricapi : " + 25 + " km");
+                case SATURN:
+                    System.out.println("Saturnun yaricapi : " + 25 + " km");
                     break;
 
-                case 6:
-                    System.out.println(gezegenlerDizisi[6] + " yaricapi : " + 125 + " km");
+                case URANUS:
+                    System.out.println("Uranusun yaricapi : " + 125 + " km");
                     break;
 
-                case 7:
-                    System.out.println(gezegenlerDizisi[7] + " yaricapi : " + 75 + " km");
+                case NEPTUN:
+                    System.out.println("Neptunun yaricapi : " + 75 + " km");
                     break;
 
-                case 8:
-                    System.out.println(gezegenlerDizisi[8] + " yaricapi : " + 55 + " km");
-                    break;
             }
         }
     }
         public static void donmeSuresi () {
 
-            for (int i = 0; i < gezegenlerDizisi.length; i++) {
+            for (gezegenlerDizisi gezegen : gezegenlerDizisi.values()) {
 
-                switch (i) {
+                switch (gezegen) {
 
-                    case 0:
-                        System.out.println(gezegenlerDizisi[0] + " donme suresi : " + 45 + " saat");
+                    case MERKUR:
+                        System.out.println("Merkurun donme suresi : " + 45 + " saat");
                         break;
 
-                    case 1:
-                        System.out.println(gezegenlerDizisi[1] + " donme suresi : " + 65 + " saat");
+                    case VENUS:
+                        System.out.println("Venusun donme suresi : " + 65 + " saat");
                         break;
 
-                    case 2:
-                        System.out.println(gezegenlerDizisi[2] + " donme suresi : " + 60 + " saat");
+                    case DUNYA:
+                        System.out.println("Dunyanin donme suresi : " + 60 + " saat");
                         break;
 
-                    case 3:
-                        System.out.println(gezegenlerDizisi[3] + " donme suresi : " + 40 + " saat");
+                    case MARS:
+                        System.out.println("Marsin donme suresi : " + 40 + " saat");
                         break;
 
-                    case 4:
-                        System.out.println(gezegenlerDizisi[4] + " donme suresi : " + 155 + " saat");
+                    case JUPITER:
+                        System.out.println("Jupiterin donme suresi : " + 155 + " saat");
                         break;
 
-                    case 5:
-                        System.out.println(gezegenlerDizisi[5] + " donme suresi : " + 25 + " saat");
+                    case SATURN:
+                        System.out.println("Saturnun donme suresi : " + 25 + " saat");
                         break;
 
-                    case 6:
-                        System.out.println(gezegenlerDizisi[6] + " donme suresi : " + 125 + " saat");
+                    case URANUS:
+                        System.out.println("Uranusun donme suresi : " + 125 + " saat");
                         break;
 
-                    case 7:
-                        System.out.println(gezegenlerDizisi[7] + " donme suresi : " + 75 + " saat");
+                    case NEPTUN:
+                        System.out.println("Neptunun donme suresi : " + 75 + " saat");
                         break;
 
-                    case 8:
-                        System.out.println(gezegenlerDizisi[8] + " donme suresi : " + 55 + " saat");
-                        break;
                 }
             }
         }
 
         public static void main (String[]args){
 
-            System.out.println("Gunes sisteminde varolan gezegenlerin listesi : "+s);
             System.out.println("***********************************************");
             System.out.println("***********************************************");
             siralama();
@@ -125,6 +124,8 @@ public class Gezegenler {
             System.out.println("***********************************************");
             System.out.println("***********************************************");
             donmeSuresi();
+            System.out.println("***********************************************");
+            System.out.println("***********************************************");
 
         }
     }
